@@ -13,7 +13,7 @@ const errorMiddleware = require("./error-middleware");
 
 //tackle corse before json
 const corsOptions={
-    origin:"http://localhost:5173",
+    origin:"https://mern-e-commerce-pf2r.onrender.com",
     methods:"GET,POST,DELETE,PATCH,HEAD",
     Credential:true,
 }
