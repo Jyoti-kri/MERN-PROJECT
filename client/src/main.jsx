@@ -5,6 +5,8 @@ import App from './App.jsx'
 import { AuthProvider } from './store/auth.jsx'
 import {ToastContainer} from 'react-toastify'
 
+export const serverURL="http://localhost:5000"
+
 createRoot(document.getElementById('root')).render(
   <AuthProvider>
     <StrictMode>

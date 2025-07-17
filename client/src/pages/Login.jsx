@@ -2,8 +2,11 @@ import { useState } from "react";   // curly bracket only when we use export at 
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
 import {toast} from "react-toastify"
+import { serverURL } from "../main";
 
-const URL="http://localhost:5000/api/auth/login";
+
+
+
 export const Login=()=>{ 
 
     const[user,setUser]=useState({
@@ -34,7 +37,7 @@ export const Login=()=>{
 
         try{
 
-            const res= await fetch(URL, {
+            const res= await fetch(`${serverURL}/api/auth/login`, {
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

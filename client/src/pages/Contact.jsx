@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../store/auth";
+import { serverURL } from "../main";
 
 export const Contact=()=>{
 
@@ -56,7 +57,7 @@ export const Contact=()=>{
         //console.log(contact)
 
         try{
-            const res=await fetch("http://localhost:5000/api/form/contact",
+            const res=await fetch(`${serverURL}/api/form/contact`,
                 {
                     method:"POST",
                     headers:{

@@ -4,7 +4,7 @@ export const Footer=() =>{
     return(
         <>
         <footer>
-            <p>@Jyoti 2024</p>
+            <p>@Jyoti 2025</p>
         </footer>
         </>
     )

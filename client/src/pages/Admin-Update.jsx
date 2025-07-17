@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { useAuth } from "../store/auth"
 import { toast } from "react-toastify"
+import { serverURL } from "../main"
 
 
 export const AdminUpdate=()=>{
@@ -23,7 +24,7 @@ export const AdminUpdate=()=>{
     const getSingleUserData=async()=>{
         try{
 
-            const response=await fetch(`http://localhost:5000/api/admin/users/${params.id}`,
+            const response=await fetch(`${serverURL}/api/admin/users/${params.id}`,
                 {
                     method:"GET",
                     headers:{
@@ -61,7 +62,7 @@ export const AdminUpdate=()=>{
         //console.log(contact)
 
         try{
-            const response=await fetch(`http://localhost:5000/api/admin/users/update/${params.id}`,
+            const response=await fetch(`${serverURL}/api/admin/users/update/${params.id}`,
                 {
                     method:"PATCH",
                     headers:{

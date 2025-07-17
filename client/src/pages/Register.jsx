@@ -2,6 +2,7 @@ import { useReducer, useState } from "react";
 import {useNavigate} from "react-router-dom";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
+import { serverURL } from "../main";
 
 // cors helps to run at same domain 5173 5000
 
@@ -41,7 +42,7 @@ export const Register=()=>{
         //connect to mongoDb and backend
         try{
 
-            const response= await fetch(`http://localhost:5000/api/auth/register`, {
+            const response= await fetch(`${serverURL}/api/auth/register`, {
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
