@@ -5,7 +5,7 @@ import App from './App.jsx'
 import { AuthProvider } from './store/auth.jsx'
 import {ToastContainer} from 'react-toastify'
 
-export const serverURL="http://localhost:5000"
+export const serverURL="https://mern-project-backend-oaa0.onrender.com"
 
 createRoot(document.getElementById('root')).render(
   <AuthProvider>
